@@ -54,6 +54,8 @@ To run the application, follow these steps:
 6. You can now access the API endpoints using an API client, such as Postman, or by connecting the backend to a frontend application.
 
 ## API Endpoints
+- `GET /api/developer`: Fetch all developers
+- `POST /api/developer`: Add a new developer
 - `GET /api/products`: Fetch all products
 - `POST /api/products`: Create a new product
 - `GET /api/products/{productNumber}`: Fetch a single product by product number
