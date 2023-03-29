@@ -57,4 +57,4 @@ To run the application, follow these steps:
 - `GET /api/products/search/scrum-master?name={name}`: Search products by Scrum Master name
 - `GET /api/products/search/developer?name={name}`: Search products by developer name
 
-5. You can also access Swagger API by accessing (http://localhost:3000/swagger-ui/index.html#/)
+5. You can also access Swagger API by accessing (http://localhost:3000/swagger-ui/index.html#/) once application is running.
