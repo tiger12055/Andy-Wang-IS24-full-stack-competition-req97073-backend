@@ -56,3 +56,5 @@ To run the application, follow these steps:
 - `PUT /api/products/{productNumber}`: Update a product by product number（my assumption: the dev must be in my database then user can add this specific developer）
 - `GET /api/products/search/scrum-master?name={name}`: Search products by Scrum Master name
 - `GET /api/products/search/developer?name={name}`: Search products by developer name
+
+5. You can also access Swagger API by accessing [Link Text](http://localhost:3000/swagger-ui/index.html#/)
