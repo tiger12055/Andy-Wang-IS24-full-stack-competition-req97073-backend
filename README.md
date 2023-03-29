@@ -47,7 +47,11 @@ To run the application, follow these steps:
 
 3. Once the application starts successfully, you should see log messages indicating that the application is running, including the port number it's listening on (3000 by default).
 
-4. You can now access the API endpoints using an API client, such as Postman, or by connecting the backend to a frontend application.
+4. You can also access Swagger API by accessing (http://localhost:3000/api/api-docs) once application is running.
+
+5. For this project, I am using in-memory H2 database and you can find my sql and schema file under resources/ folder.
+
+6. You can now access the API endpoints using an API client, such as Postman, or by connecting the backend to a frontend application.
 
 ## API Endpoints
 - `GET /api/products`: Fetch all products
@@ -57,4 +61,4 @@ To run the application, follow these steps:
 - `GET /api/products/search/scrum-master?name={name}`: Search products by Scrum Master name
 - `GET /api/products/search/developer?name={name}`: Search products by developer name
 
-5. You can also access Swagger API by accessing (http://localhost:3000/api/api-docs) once application is running.
+
