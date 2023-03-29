@@ -43,12 +43,11 @@ If you have Maven installed on your system, you can use:
     mvn spring-boot:run
     ```
     or
-
     ```
     mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
     ```
 
-3. Once the application starts successfully, you should see log messages indicating that the application is running, including the port number it's listening on (usually 8080 by default).
+3. Once the application starts successfully, you should see log messages indicating that the application is running, including the port number it's listening on (3000 by default).
 
 4. You can now access the API endpoints using an API client, such as Postman, or by connecting the backend to a frontend application.
 
