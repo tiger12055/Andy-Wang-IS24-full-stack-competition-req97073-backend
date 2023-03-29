@@ -38,12 +38,9 @@ To run the application, follow these steps:
    ```
 
 If you have Maven installed on your system, you can use:
-    
     ```
     mvn spring-boot:run
-    ```
-    or
-    ```
+
     mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
     ```
 
