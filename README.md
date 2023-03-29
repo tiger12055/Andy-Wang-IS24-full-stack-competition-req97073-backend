@@ -20,19 +20,31 @@ To run the application, follow these steps:
 2. Run the following command(the default port is 3000):
 
    For Unix-based systems:
+   ```
    ./mvnw spring-boot:run
+   ```
    or
+   ```
    ./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
+   ```
 
    For Windows:
+   ```
    mvnw.cmd spring-boot:run
+   ```
    or
+   ```
    mvnw.cmd spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
+   ```
 
 If you have Maven installed on your system, you can use:
+    ```
     mvn spring-boot:run
+    ```
     or
+    ```
     mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
+    ```
 
 3. Once the application starts successfully, you should see log messages indicating that the application is running, including the port number it's listening on (usually 8080 by default).
 
