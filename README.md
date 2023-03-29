@@ -37,11 +37,11 @@ To run the application, follow these steps:
    mvnw.cmd spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
    ```
 
-If you have Maven installed on your system, you can use:
-```
+   If you have Maven installed on your system, you can use:
+    ```
     mvn spring-boot:run
     ```
-  ```
+    ```
     mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
     ```
 
