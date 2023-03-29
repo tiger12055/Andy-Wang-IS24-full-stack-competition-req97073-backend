@@ -57,9 +57,9 @@ To run the application, follow these steps:
 - `GET /api/developer`: Fetch all developers
 - `POST /api/developer`: Add a new developer
 - `GET /api/products`: Fetch all products
-- `POST /api/products`: Create a new product
+- `POST /api/products`: Create a new product（my assumption: the developer must be in my database then user can add this specific developer under products otherwise user can hit developer api to add developer）
 - `GET /api/products/{productNumber}`: Fetch a single product by product number
-- `PUT /api/products/{productNumber}`: Update a product by product number（my assumption: the dev must be in my database then user can add this specific developer under products otherwise user can hit developer api to add developer）
+- `PUT /api/products/{productNumber}`: Update a product by product number（my assumption: the developer must be in my database then user can add this specific developer under products otherwise user can hit developer api to add developer）
 - `GET /api/products/search/scrum-master?name={name}`: Search products by Scrum Master name
 - `GET /api/products/search/developer?name={name}`: Search products by developer name
 
