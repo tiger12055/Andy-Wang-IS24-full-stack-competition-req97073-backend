@@ -49,7 +49,9 @@ To run the application, follow these steps:
 
 4. You can also access Swagger API by accessing (http://localhost:3000/api/api-docs) once application is running.
 
-5. For this project, I am using in-memory H2 database and you can find my sql and schema file under resources/ folder. To check the database update, you can go to (http://localhost:3000/h2-console/) once application is running and you can log in to h2 database with the following info:
+5. You can also check health endpoint that indicating my component is healthy by accessing (http://localhost:3000/api/actuator/health)
+
+6. For this project, I am using in-memory H2 database and you can find my sql and schema file under resources/ folder. To check the database update, you can go to (http://localhost:3000/h2-console/) once application is running and you can log in to h2 database with the following info:
 
 ```
 Driver Class: org.h2.Driver
@@ -57,7 +59,7 @@ JDBC URL: jdbc:h2:mem:testdb
 User Name: sa
 ```
 
-6. You can now access the API endpoints using an API client, such as Postman, or by connecting the backend to a frontend application.
+7. You can now access the API endpoints using an API client, such as Postman, or by connecting the backend to a frontend application.
 
 ## API Endpoints
 - `GET /api/developer`: Fetch all developers
