@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DeveloperServiceImpl implements DeveloperService {
@@ -14,15 +15,13 @@ public class DeveloperServiceImpl implements DeveloperService {
     private DeveloperRepository developerRepository;
     @Override
     public Developer addDeveloper(Developer developer) {
-        Developer existingDeveloper = developerRepository.findByDeveloperName(developer.getDeveloperName());
+        Optional<Developer> existingDeveloper = developerRepository.findByDeveloperName(developer.getDeveloperName());
 
-        if (existingDeveloper != null) {
+        if (existingDeveloper.isPresent()) {
             throw new IllegalArgumentException("Developer with the given name already exists.");
         }
         // Save the developer to the database
-        Developer savedDeveloper = developerRepository.save(developer);
-
-        return savedDeveloper;
+        return developerRepository.save(developer);
     }
 
     @Override

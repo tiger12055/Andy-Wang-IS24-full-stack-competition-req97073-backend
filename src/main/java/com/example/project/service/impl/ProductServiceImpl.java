@@ -115,11 +115,11 @@ public class ProductServiceImpl implements ProductService {
      */
     @Override
     public List<ProductResponse> findByDeveloper(String developerName) {
-        Developer developer = developerRepository.findByDeveloperName(developerName);
+        Optional<Developer> developer = developerRepository.findByDeveloperName(developerName);
         List<ProductResponse> productResponses = new ArrayList<>();
 
-        if (developer != null) {
-            List<Product> products = developer.getProducts();
+        if (developer.isPresent()) {
+            List<Product> products = developer.get().getProducts();
 
             for (Product product : products) {
                 productResponses.add(mapProductToProductResponse(product));
@@ -157,7 +157,7 @@ public class ProductServiceImpl implements ProductService {
       */
     private boolean areAllDevelopersExisting(List<Developer> developers) {
         for (Developer developer : developers) {
-            if (developerRepository.findByDeveloperName(developer.getDeveloperName()) == null) {
+            if (developerRepository.findByDeveloperName(developer.getDeveloperName()).isEmpty()) {
                 return false;
             }
         }
@@ -169,13 +169,14 @@ public class ProductServiceImpl implements ProductService {
       * @param developers The list of Developers to retrieve from the database.
       * @return List<Developer> A list of existing Developer objects.
       */
-    private List<Developer> getExistingDevelopers(List<Developer> developers) {
-        List<Developer> existingDevelopers = new ArrayList<>();
-        for (Developer developer : developers) {
-            existingDevelopers.add(developerRepository.findByDeveloperName(developer.getDeveloperName()));
-        }
-        return existingDevelopers;
-    }
+     private List<Developer> getExistingDevelopers(List<Developer> developers) {
+         List<Developer> existingDevelopers = new ArrayList<>();
+         for (Developer developer : developers) {
+             developerRepository.findByDeveloperName(developer.getDeveloperName())
+                     .ifPresent(existingDevelopers::add);
+         }
+         return existingDevelopers;
+     }
 
      /**
       * Validates the list of developers associated with a product.
