@@ -47,6 +47,13 @@ public class ProductServiceImpl implements ProductService {
       @return ProductResponse The saved product as a ProductResponse object.
      */
     public ProductResponse save(Product product) {
+
+        // check same product has created or not
+        String productName = product.getProductName();
+        if(productRepository.findByProductName(productName).isPresent()) {
+            throw new IllegalArgumentException("The same product has been already created.");
+        }
+        // else start add new product
         // Generate a unique product number
         int productNumber = generateUniqueProductNumber();
         product.setProductNumber(productNumber);

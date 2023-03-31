@@ -16,11 +16,12 @@ public class DeveloperServiceImpl implements DeveloperService {
     @Override
     public Developer addDeveloper(Developer developer) {
         Optional<Developer> existingDeveloper = developerRepository.findByDeveloperName(developer.getDeveloperName());
-
         if (existingDeveloper.isPresent()) {
             throw new IllegalArgumentException("Developer with the given name already exists.");
         }
-        // Save the developer to the database
+        int newDevId = developerRepository.findMaxDeveloperId() + 1;
+
+        developer.setId(newDevId);
         return developerRepository.save(developer);
     }
 
