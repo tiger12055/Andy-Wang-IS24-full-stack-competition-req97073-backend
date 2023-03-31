@@ -44,13 +44,18 @@ To run the application, follow these steps:
     ```
     mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=PORT_NUMBER"
     ```
+## Assumption I made
+The new developer(only developer info this including developer name) must first inserted into developer table using (POST /api/developer) then user can add this specific new developer under products. Otherwise, user can only add existing developers to the new created product.
 
 3. Once the application starts successfully, you should see log messages indicating that the application is running, including the port number it's listening on (3000 by default).
 
+## Swagger doc
 4. You can also access Swagger API by accessing (http://localhost:3000/api/api-docs) once application is running.
 
+## Health check end point
 5. You can also check health endpoint that indicating my component is healthy by accessing (http://localhost:3000/api/actuator/health)
 
+## In memory Database
 6. For this project, I am using in-memory H2 database and you can find my sql and schema file under resources/ folder. To check the database update, you can go to (http://localhost:3000/h2-console/) once application is running and you can log in to h2 database with the following info:
 
 ```
