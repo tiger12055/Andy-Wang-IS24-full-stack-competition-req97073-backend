@@ -46,8 +46,12 @@ To run the application, follow these steps:
     ```
 ## Assumption I made
 The new developer(only developer info this including developer name) must first inserted into developer table using (POST /api/developer) then user can add this specific new developer under products. Otherwise, user can only add existing developers to the new created product.
+You can use the postman script to add developer and simple test scripts are provided under postman folder.
 
 3. Once the application starts successfully, you should see log messages indicating that the application is running, including the port number it's listening on (3000 by default).
+
+## Postman Scripts
+The simple postman scripts for you to test backend application are provided under postman folder.
 
 ## Swagger doc
 4. You can also access Swagger API by accessing (http://localhost:3000/api/api-docs) once application is running.
