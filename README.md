@@ -63,6 +63,7 @@ Driver Class: org.h2.Driver
 JDBC URL: jdbc:h2:mem:testdb
 User Name: sa
 ```
+The database will get updated everytime when you perform addition and update operation from Angular frontend.
 
 7. You can now access the API endpoints using an API client, such as Postman, or by connecting the backend to a frontend application.
 
